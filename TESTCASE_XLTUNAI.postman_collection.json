@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f64d0abc-295d-4e18-9503-be3cac01cb5d",
+		"_postman_id": "2782e9f7-a513-4897-9f2d-fc3d92cde952",
 		"name": "TESTCASE_XLTUNAI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -23,6 +23,9 @@
 												"id": "9b562b75-13ac-4581-84e3-0ce68913dca4",
 												"exec": [
 													"var jsonData = pm.response.json();",
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
 													"",
 													"pm.environment.set(\"name\", jsonData.name + ' ' + jsonData.surname);",
 													"pm.environment.set(\"country\", jsonData.region);",
