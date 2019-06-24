@@ -474,7 +474,6 @@
 					],
 					"description": "Test case postive for add data watchlist",
 					"_postman_isSubFolder": true
-<<<<<<<
 				},
 				{
 					"name": "#TC-001 Negative -BOD Without Month",
@@ -1394,7 +1393,6 @@
 					],
 					"description": "Test case postive for add data watchlist",
 					"_postman_isSubFolder": true
-=======
 				},
 				{
 					"name": "#TC-002",
@@ -1652,7 +1650,6 @@
 						}
 					],
 					"_postman_isSubFolder": true
->>>>>>>
 				}
 			]
 		},
