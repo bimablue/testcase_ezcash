@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "aacaa5fe-152b-4e5e-a2ab-9b89f304a2b4",
+		"_postman_id": "86f6f2ee-a0bc-4979-9df5-139c75cc13df",
 		"name": "TESTCASE_XLTUNAI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -474,6 +474,7 @@
 					],
 					"description": "Test case postive for add data watchlist",
 					"_postman_isSubFolder": true
+<<<<<<<
 				},
 				{
 					"name": "#TC-001 Negative -BOD Without Month",
@@ -1393,6 +1394,265 @@
 					],
 					"description": "Test case postive for add data watchlist",
 					"_postman_isSubFolder": true
+=======
+				},
+				{
+					"name": "#TC-002",
+					"item": [
+						{
+							"name": "GIVEN Admin can upload Excel File",
+							"item": [
+								{
+									"name": "Get Fakes Name",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9b562b75-13ac-4581-84e3-0ce68913dca4",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.environment.set(\"name\", jsonData.name + ' ' + jsonData.surname);",
+													"pm.environment.set(\"country\", jsonData.region);",
+													"",
+													"",
+													"",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://uinames.com/api/?ext",
+											"protocol": "https",
+											"host": [
+												"uinames",
+												"com"
+											],
+											"path": [
+												"api",
+												""
+											],
+											"query": [
+												{
+													"key": "ext",
+													"value": null
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "WHEN Upload file with date of birth and IC Number",
+							"item": [
+								{
+									"name": "200 : Add Watchlist",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a6eed598-6caf-4cce-9780-57aeac0205c1",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Success\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "0037d44c-f757-4496-8392-ea4ecd9d20f9",
+												"exec": [
+													"var categories = ['WMD', 'WARNING', 'TERORIS', 'BLACSLIST']\r",
+													"var chosen_category = categories.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"pm.environment.set(\"watchlistCategory\", chosen_category);\r",
+													"\r",
+													"var ic_number = Math.floor(Math.random() * 10000000000000000);\r",
+													"pm.environment.set(\"icNumber\", ic_number);\r",
+													"\r",
+													"var ic_types = ['KTP', 'Passport', 'SIM', 'KITAS']\r",
+													"var chosen_icType = ic_types.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"pm.environment.set(\"icType\", chosen_icType);\r",
+													"\r",
+													"var moment = require('moment');\r",
+													"pm.environment.set('dob', moment().add(Math.floor(Math.random() * -7300) - 10950, 'days').format('YYYY/MM/DD'));\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "lang",
+												"value": "en"
+											},
+											{
+												"key": "request-id",
+												"value": "{{request-id}}"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\": \"{{dob}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
+										},
+										"url": {
+											"raw": "{{hostname}}:8185/watchlist/add?lang=en",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"watchlist",
+												"add"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										},
+										"description": "Add or update watchlist"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "THEN the file will still be uploaded with the default description ",
+							"item": [
+								{
+									"name": "200 : Search Watchlist by Name",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "eea9caa6-ce86-44be-9041-15eec4a27dd6",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"var body = pm.environment.get(\"name\"); ",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(body);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "request-id",
+												"value": "{{request-id}}"
+											}
+										],
+										"url": {
+											"raw": "{{hostname}}:8185/watchlist/search?lang=en&filter={{name}}&page=0",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"watchlist",
+												"search"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												},
+												{
+													"key": "filter",
+													"value": "{{name}}"
+												},
+												{
+													"key": "page",
+													"value": "0"
+												}
+											]
+										},
+										"description": "search watchlist"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"description": "Test case postive for add data watchlist",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "cdea4c6c-c8f0-443f-ac68-6e57c93f9ad1",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ffab8780-25fe-4d19-8529-90b2887aa98a",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+>>>>>>>
 				}
 			]
 		},
