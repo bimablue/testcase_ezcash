@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "86f6f2ee-a0bc-4979-9df5-139c75cc13df",
+		"_postman_id": "bc55c891-5937-4002-8888-9cd3e89543c5",
 		"name": "TESTCASE_XLTUNAI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -9,7 +9,7 @@
 			"name": "WATCHLIST",
 			"item": [
 				{
-					"name": "#TC-001",
+					"name": "#TC-001 Add Watchlist",
 					"item": [
 						{
 							"name": "GIVEN Admin can upload Excel File",
@@ -93,7 +93,7 @@
 											"script": {
 												"id": "0037d44c-f757-4496-8392-ea4ecd9d20f9",
 												"exec": [
-													"var categories = ['WMD', 'WARNING', 'TERORIS', 'BLACSLIST']\r",
+													"var categories = ['WARNING', 'PEP', 'WMD','TERORIST', 'BLACKLIST']\r",
 													"var chosen_category = categories.sort(function() {return 0.5 - Math.random()})[0];\r",
 													"\r",
 													"pm.environment.set(\"watchlistCategory\", chosen_category);\r",
@@ -134,7 +134,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{bod}}\"\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
+											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{dob}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
 										},
 										"url": {
 											"raw": "{{hostname}}:8185/watchlist/add?lang=en",
@@ -328,7 +328,7 @@
 											"script": {
 												"id": "0037d44c-f757-4496-8392-ea4ecd9d20f9",
 												"exec": [
-													"var categories = ['WMD', 'WARNING', 'TERORIS', 'BLACSLIST']\r",
+													"var categories = ['WARNING', 'PEP', 'WMD','TERORIST', 'BLACKLIST']\r",
 													"var chosen_category = categories.sort(function() {return 0.5 - Math.random()})[0];\r",
 													"\r",
 													"pm.environment.set(\"watchlistCategory\", chosen_category);\r",
@@ -571,7 +571,7 @@
 											"script": {
 												"id": "0037d44c-f757-4496-8392-ea4ecd9d20f9",
 												"exec": [
-													"var categories = ['WMD', 'WARNING', 'TERORIS', 'BLACSLIST']\r",
+													"var categories = ['WARNING', 'PEP', 'WMD','TERORIST', 'BLACKLIST']\r",
 													"var chosen_category = categories.sort(function() {return 0.5 - Math.random()})[0];\r",
 													"\r",
 													"pm.environment.set(\"watchlistCategory\", chosen_category);\r",
@@ -612,7 +612,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{bod}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
+											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{dob}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
 										},
 										"url": {
 											"raw": "{{hostname}}:8185/watchlist/add?lang=en",
@@ -806,7 +806,7 @@
 											"script": {
 												"id": "0037d44c-f757-4496-8392-ea4ecd9d20f9",
 												"exec": [
-													"var categories = ['WMD', 'WARNING', 'TERORIS', 'BLACSLIST']\r",
+													"var categories = ['WARNING', 'PEP', 'WMD','TERORIST', 'BLACKLIST']\r",
 													"var chosen_category = categories.sort(function() {return 0.5 - Math.random()})[0];\r",
 													"\r",
 													"pm.environment.set(\"watchlistCategory\", chosen_category);\r",
@@ -846,7 +846,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{bod}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
+											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{dob}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
 										},
 										"url": {
 											"raw": "{{hostname}}:8185/watchlist/add?lang=en",
@@ -1482,7 +1482,7 @@
 											"script": {
 												"id": "0037d44c-f757-4496-8392-ea4ecd9d20f9",
 												"exec": [
-													"var categories = ['WMD', 'WARNING', 'TERORIS', 'BLACSLIST']\r",
+													"var categories = ['WARNING', 'PEP', 'WMD','TERORIST', 'BLACKLIST']\r",
 													"var chosen_category = categories.sort(function() {return 0.5 - Math.random()})[0];\r",
 													"\r",
 													"pm.environment.set(\"watchlistCategory\", chosen_category);\r",
@@ -1650,6 +1650,309 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "#TC-003 - Delete Watchlist",
+					"item": [
+						{
+							"name": "GIVEN Admin can upload Excel File",
+							"item": [
+								{
+									"name": "Get Fakes Name",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9b562b75-13ac-4581-84e3-0ce68913dca4",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.environment.set(\"name\", jsonData.name + ' ' + jsonData.surname);",
+													"pm.environment.set(\"country\", jsonData.region);",
+													"",
+													"",
+													"",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://uinames.com/api/?ext",
+											"protocol": "https",
+											"host": [
+												"uinames",
+												"com"
+											],
+											"path": [
+												"api",
+												""
+											],
+											"query": [
+												{
+													"key": "ext",
+													"value": null
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "200 : Add Watchlist",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a6eed598-6caf-4cce-9780-57aeac0205c1",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Success\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "0037d44c-f757-4496-8392-ea4ecd9d20f9",
+												"exec": [
+													"var categories = ['WARNING', 'PEP', 'WMD','TERORIST', 'BLACSLIST']\r",
+													"var chosen_category = categories.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"pm.environment.set(\"watchlistCategory\", chosen_category);\r",
+													"\r",
+													"var ic_number = Math.floor(Math.random() * 10000000000000000);\r",
+													"pm.environment.set(\"icNumber\", ic_number);\r",
+													"\r",
+													"var ic_types = ['KTP', 'Passport', 'SIM', 'KITAS']\r",
+													"var chosen_icType = ic_types.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"pm.environment.set(\"icType\", chosen_icType);\r",
+													"\r",
+													"var moment = require('moment');\r",
+													"pm.environment.set('dob', moment().add(Math.floor(Math.random() * -7300) - 10950, 'days').format('YYYY/MM/DD'));\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "lang",
+												"value": "en"
+											},
+											{
+												"key": "request-id",
+												"value": "{{request-id}}"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\": \"{{dob}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
+										},
+										"url": {
+											"raw": "{{hostname}}:8185/watchlist/add?lang=en",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"watchlist",
+												"add"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										},
+										"description": "Add or update watchlist"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "WHEN Admin remove watchlist",
+							"item": [
+								{
+									"name": "200: Delete Watchlist",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "request-id",
+												"value": "{{request-id}}",
+												"type": "text"
+											},
+											{
+												"key": "lang",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\": \"{{dob}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
+										},
+										"url": {
+											"raw": "{{hostname}}:8185/watchlist/del?lang=en",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"watchlist",
+												"del"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "THEN Watchlist can't search",
+							"item": [
+								{
+									"name": "200 : Search Watchlist by Name",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "eea9caa6-ce86-44be-9041-15eec4a27dd6",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"var body = pm.environment.get(\"name\"); ",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(body);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "request-id",
+												"value": "{{request-id}}"
+											}
+										],
+										"url": {
+											"raw": "{{hostname}}:8185/watchlist/search?lang=en&filter={{name}}&page=0",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"watchlist",
+												"search"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												},
+												{
+													"key": "filter",
+													"value": "{{name}}"
+												},
+												{
+													"key": "page",
+													"value": "0"
+												}
+											]
+										},
+										"description": "search watchlist"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"description": "Test case postive for add data watchlist",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "cdea4c6c-c8f0-443f-ac68-6e57c93f9ad1",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ffab8780-25fe-4d19-8529-90b2887aa98a",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
@@ -1657,7 +1960,7 @@
 			"name": "CUSTOMER",
 			"item": [
 				{
-					"name": "TC-001",
+					"name": "TC-001 - Create Customer Normal Flow",
 					"item": [
 						{
 							"name": "GIVEN Admin can create Customer",
@@ -1672,8 +1975,9 @@
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"",
+													"pm.environment.set(\"surName\", jsonData.surname);",
 													"pm.environment.set(\"name\", jsonData.name + ' ' + jsonData.surname);",
-													"pm.environment.set(\"gender\", jsonData.gender);",
+													"pm.environment.set(\"gender\", jsonData.gender.toUpperCase());",
 													"pm.environment.set(\"country\", jsonData.region);",
 													"",
 													"",
@@ -1711,195 +2015,6 @@
 										}
 									},
 									"response": []
-								},
-								{
-									"name": "Get Fake Data",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "https://randomuser.me/api?nat=en",
-											"protocol": "https",
-											"host": [
-												"randomuser",
-												"me"
-											],
-											"path": [
-												"api"
-											],
-											"query": [
-												{
-													"key": "nat",
-													"value": "en"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Get Countries",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f23a4a34-5644-4102-b663-04751faed8ff",
-												"exec": [
-													"var jsonData = pm.response.json();",
-													"",
-													"var countryId = jsonData.countries[1].countryId;",
-													"var countryCode = jsonData.countries[1].countryCode;",
-													"var country = jsonData.countries[1].country;",
-													"",
-													"pm.environment.set(\"countryId\", countryId);",
-													"pm.environment.set(\"countryCode\", countryCode);",
-													"pm.environment.set(\"country\", country);"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											},
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"url": {
-											"raw": "{{hostname}}:8195/base/countires?lang=en",
-											"host": [
-												"{{hostname}}"
-											],
-											"port": "8195",
-											"path": [
-												"base",
-												"countires"
-											],
-											"query": [
-												{
-													"key": "lang",
-													"value": "en"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Get Provincies",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "2893b843-5e5c-43ff-9a62-770dc35ea655",
-												"exec": [
-													"var jsonData = pm.response.json();",
-													"",
-													"var provinceId = jsonData.provinces[0].provinceId;",
-													"var provinceCode = jsonData.provinces[0].provinceCode;",
-													"var province = jsonData.provinces[0].province;",
-													"",
-													"pm.environment.set(\"provinceId\", provinceId);",
-													"pm.environment.set(\"provinceCode\", provinceCode);",
-													"pm.environment.set(\"province\", province);"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											},
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"url": {
-											"raw": "{{hostname}}:8195/base/provinces/{{countryId}}?lang=en",
-											"host": [
-												"{{hostname}}"
-											],
-											"port": "8195",
-											"path": [
-												"base",
-												"provinces",
-												"{{countryId}}"
-											],
-											"query": [
-												{
-													"key": "lang",
-													"value": "en"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Get Cities",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "5949ecf9-cf7c-4404-afc2-c87d8e4d4603",
-												"exec": [
-													"var jsonData = pm.response.json();",
-													"",
-													"var cityId = jsonData.cities[0].cityId;",
-													"var cityCode = jsonData.cities[0].cityCode;",
-													"var city = jsonData.cities[0].city;",
-													"",
-													"pm.environment.set(\"cityId\", cityId);",
-													"pm.environment.set(\"cityCode\", cityCode);",
-													"pm.environment.set(\"city\", city);"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											},
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"url": {
-											"raw": "{{hostname}}:8195/base/cities/{{provinceId}}?lang=en",
-											"host": [
-												"{{hostname}}"
-											],
-											"port": "8195",
-											"path": [
-												"base",
-												"cities",
-												"{{provinceId}}"
-											],
-											"query": [
-												{
-													"key": "lang",
-													"value": "en"
-												}
-											]
-										}
-									},
-									"response": []
 								}
 							],
 							"_postman_isSubFolder": true
@@ -1924,7 +2039,8 @@
 													"pm.environment.set(\"icType\", chosen_icType);\r",
 													"\r",
 													"var moment = require('moment');\r",
-													"pm.environment.set('dob', moment().add(Math.floor(Math.random() * -7300) - 10950, 'days').format('YYYY/MM/DD'));\r",
+													"pm.environment.set('dob', moment().add(Math.floor(Math.random() * -7300) - 10950, 'days').format('DD-MM-YYYY'));\r",
+													"pm.environment.set('timestamp', moment().format('YYYY-MM-DD HH:MM:SS'));\r",
 													"\r",
 													"var operator = [\"XL\", \"AXIS\"];\r",
 													"var chosen_operator = operator.sort(function() {return 0.5 - Math.random()})[0];\r",
@@ -1945,13 +2061,33 @@
 												],
 												"type": "text/javascript"
 											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "3409c7a2-7ad6-4e56-adf2-23f9a220b013",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(jsonData.subscriberCode);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
 										}
 									],
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
 									"request": {
-										"method": "GET",
+										"method": "POST",
 										"header": [
 											{
 												"key": "Content-Type",
@@ -1972,7 +2108,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"addedDate\": \"yyyy-MM-dd HH:mm:ss\",\r\n  \"addedUser\": \"string\",\r\n  \"address\": \"string\",\r\n  \"city\": 0,\r\n  \"companyContactNumber\": \"string\",\r\n  \"companyEmail\": \"string\",\r\n  \"companyName\": \"string\",\r\n  \"country\": 0,\r\n  \"customerName\": \"{{name}}\",\r\n  \"dateOfBirth\": \"{{dob}}\",\r\n  \"familyCardNo\": \"string\",\r\n  \"gender\": \"{{gender}}\",\r\n  \"icNumber\": \"{{icNumber}}\",\r\n  \"icType\": \"{{icType}}\",\r\n  \"kycType\": \"LEVEL 3\",\r\n  \"kycTypeId\": 44,\r\n  \"mobileNumber\": \"{{mobileNumber}}\",\r\n  \"modifiedBy\": \"string\",\r\n  \"modifiedReason\": \"string\",\r\n  \"mothersMaidenName\": \"string\",\r\n  \"nationality\": 0,\r\n  \"note\": \"string\",\r\n  \"objective\": \"string\",\r\n  \"occupation\": \"string\",\r\n  \"ownerId\": 0,\r\n  \"placeOfBirth\": \"string\",\r\n  \"politicallyExposed\": false,\r\n  \"provider\": \"{{operator}}\",\r\n  \"province\": {{provinceId}},\r\n  \"regMode\": \"string\",\r\n  \"residentailAddress\": \"string\",\r\n  \"segment\": \"string\",\r\n  \"sourceOfFund\": \"string\",\r\n  \"status\": \"string\"\r\n}"
+											"raw": "{\r\n  \"addedDate\": \"{{timestamp}}\",\r\n  \"addedUser\": \"Bima\",\r\n  \"address\": \"Jalan Cinta No 10\",\r\n  \"city\": 43,\r\n  \"companyContactNumber\": \"\",\r\n  \"companyEmail\": \"\",\r\n  \"companyName\": \"\",\r\n  \"country\": 4,\r\n  \"customerName\": \"{{name}}\",\r\n  \"dateOfBirth\": \"{{dob}}\",\r\n  \"familyCardNo\": \"\",\r\n  \"gender\": \"{{gender}}\",\r\n  \"icNumber\": \"{{icNumber}}\",\r\n  \"icType\": \"{{icType}}\",\r\n  \"kycType\": \"LEVEL 3\",\r\n  \"kycTypeId\": 44,\r\n  \"mobileNumber\": \"{{mobileNumber}}\",\r\n  \"modifiedBy\": \"\",\r\n  \"modifiedReason\": \"\",\r\n  \"mothersMaidenName\": \"{{surName}}\",\r\n  \"nationality\": 26,\r\n  \"note\": \"\",\r\n  \"objective\": \"\",\r\n  \"occupation\": \"Student\",\r\n  \"ownerId\": 0,\r\n  \"placeOfBirth\": \"Jakarta\",\r\n  \"politicallyExposed\": false,\r\n  \"provider\": \"{{operator}}\",\r\n  \"province\": 42,\r\n  \"regMode\": \"WEB\",\r\n  \"residentailAddress\": \"Jalan Cinta No 10\",\r\n  \"segment\": \"DISBURS\",\r\n  \"sourceOfFund\": \"\",\r\n  \"status\": \"ACTIVE\"\r\n}"
 										},
 										"url": {
 											"raw": "{{hostname}}:8185/subscriber/register?lang=en",
@@ -1999,13 +2135,1929 @@
 						},
 						{
 							"name": "THEN Customer can created",
-							"item": [],
+							"item": [
+								{
+									"name": "200: Search Subcriber",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "fbb3a14c-1983-48b6-a78c-62906f322a8a",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"var mobileNumber = pm.environment.get(\"mobileNumber\"); ",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(mobileNumber);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Request-Id",
+												"value": "{{request-id}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"mobileNumber\": \"{{mobileNumber}}\"\n}"
+										},
+										"url": {
+											"raw": "http://10.23.217.14:8185/subscribers/user/mobile?lang=en",
+											"protocol": "http",
+											"host": [
+												"10",
+												"23",
+												"217",
+												"14"
+											],
+											"port": "8185",
+											"path": [
+												"subscribers",
+												"user",
+												"mobile"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
 							"_postman_isSubFolder": true
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c96249bf-4d55-4789-beb6-48ccff1b1fb7",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "5469162e-661a-4cb1-a253-e7e4af947fcf",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "TC-001 - Create Customer Normal Flow Level 1",
+					"item": [
+						{
+							"name": "GIVEN Admin create customer Level 1 with normal flow",
+							"item": [
+								{
+									"name": "200: Register Subcriber",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "e606894f-0c9e-47bb-8c31-f6b13c72301a",
+												"exec": [
+													"var ic_types = ['KTP', 'Passport', 'SIM', 'KITAS']\r",
+													"var chosen_icType = ic_types.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"pm.environment.set(\"icType\", chosen_icType);\r",
+													"\r",
+													"var moment = require('moment');\r",
+													"pm.environment.set('timestamp', moment().format('YYYY-MM-DD HH:MM:SS'));\r",
+													"\r",
+													"var operator = [\"XL\", \"AXIS\"];\r",
+													"var chosen_operator = operator.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"pm.environment.set(\"operator\", chosen_operator);\r",
+													"var prefixs = [\"\"];\r",
+													"\r",
+													"if (operator == \"XL\") {\r",
+													"    prefixs =  [\"817\", \"818\", \"819\", \"877\", \"878\"];\r",
+													"}\r",
+													"else {\r",
+													"    prefixs =  [\"838\", \"831\", \"832\", \"833\"];\r",
+													"}\r",
+													"var chosen_prefix = prefixs.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"var mobileNumber =  chosen_prefix + Math.floor(Math.random() * 100000000);\r",
+													"\r",
+													"pm.environment.set(\"mobileNumber\", mobileNumber);"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "3409c7a2-7ad6-4e56-adf2-23f9a220b013",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(jsonData.subscriberCode);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "request-id",
+												"value": "{{request-id}}",
+												"type": "text"
+											},
+											{
+												"key": "lang",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"addedDate\": \"{{timestamp}}\",\r\n  \"addedUser\": \"Bima\",\r\n  \"address\": \"\",\r\n  \"city\": 43,\r\n  \"companyContactNumber\": \"\",\r\n  \"companyEmail\": \"\",\r\n  \"companyName\": \"\",\r\n  \"country\": 4,\r\n  \"customerName\": \"{{mobileNumber}}\",\r\n  \"dateOfBirth\": \"\",\r\n  \"familyCardNo\": \"\",\r\n  \"gender\": \"MALE\",\r\n  \"icNumber\": \"{{mobileNumber}}\",\r\n  \"icType\": \"{{icType}}\",\r\n  \"kycType\": \"LEVEL 1\",\r\n  \"kycTypeId\": 42,\r\n  \"mobileNumber\": \"{{mobileNumber}}\",\r\n  \"modifiedBy\": \"\",\r\n  \"modifiedReason\": \"\",\r\n  \"mothersMaidenName\": \"\",\r\n  \"nationality\": 26,\r\n  \"note\": \"\",\r\n  \"objective\": \"\",\r\n  \"occupation\": \"\",\r\n  \"ownerId\": 0,\r\n  \"placeOfBirth\": \"\",\r\n  \"politicallyExposed\": false,\r\n  \"provider\": \"{{operator}}\",\r\n  \"province\": 42,\r\n  \"regMode\": \"WEB\",\r\n  \"residentailAddress\": \"\",\r\n  \"segment\": \"\",\r\n  \"sourceOfFund\": \"\",\r\n  \"status\": \"ACTIVE\"\r\n}"
+										},
+										"url": {
+											"raw": "{{hostname}}:8185/subscriber/register?lang=en",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"subscriber",
+												"register"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "THEN Customer can created",
+							"item": [
+								{
+									"name": "200: Search Subcriber",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "fbb3a14c-1983-48b6-a78c-62906f322a8a",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"var mobileNumber = pm.environment.get(\"mobileNumber\"); ",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(mobileNumber);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Request-Id",
+												"value": "{{request-id}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"mobileNumber\": \"{{mobileNumber}}\"\n}"
+										},
+										"url": {
+											"raw": "http://10.23.217.14:8185/subscribers/user/mobile?lang=en",
+											"protocol": "http",
+											"host": [
+												"10",
+												"23",
+												"217",
+												"14"
+											],
+											"port": "8185",
+											"path": [
+												"subscribers",
+												"user",
+												"mobile"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c96249bf-4d55-4789-beb6-48ccff1b1fb7",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "5469162e-661a-4cb1-a253-e7e4af947fcf",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "TC-001 - Create Customer Normal Flow Level 2",
+					"item": [
+						{
+							"name": "GIVEN Admin can create Customer Level 1",
+							"item": [
+								{
+									"name": "200: Register Subcriber",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "e606894f-0c9e-47bb-8c31-f6b13c72301a",
+												"exec": [
+													"var ic_types = ['KTP', 'Passport', 'SIM', 'KITAS']\r",
+													"var chosen_icType = ic_types.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"pm.environment.set(\"icType\", chosen_icType);\r",
+													"\r",
+													"var moment = require('moment');\r",
+													"pm.environment.set('timestamp', moment().format('YYYY-MM-DD HH:MM:SS'));\r",
+													"\r",
+													"var operator = [\"XL\", \"AXIS\"];\r",
+													"var chosen_operator = operator.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"pm.environment.set(\"operator\", chosen_operator);\r",
+													"var prefixs = [\"\"];\r",
+													"\r",
+													"if (operator == \"XL\") {\r",
+													"    prefixs =  [\"817\", \"818\", \"819\", \"877\", \"878\"];\r",
+													"}\r",
+													"else {\r",
+													"    prefixs =  [\"838\", \"831\", \"832\", \"833\"];\r",
+													"}\r",
+													"var chosen_prefix = prefixs.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"var mobileNumber =  chosen_prefix + Math.floor(Math.random() * 100000000);\r",
+													"\r",
+													"pm.environment.set(\"mobileNumber\", mobileNumber);"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "3409c7a2-7ad6-4e56-adf2-23f9a220b013",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(jsonData.subscriberCode);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "request-id",
+												"value": "{{request-id}}",
+												"type": "text"
+											},
+											{
+												"key": "lang",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"addedDate\": \"{{timestamp}}\",\r\n  \"addedUser\": \"Bima\",\r\n  \"address\": \"\",\r\n  \"city\": 43,\r\n  \"companyContactNumber\": \"\",\r\n  \"companyEmail\": \"\",\r\n  \"companyName\": \"\",\r\n  \"country\": 4,\r\n  \"customerName\": \"{{mobileNumber}}\",\r\n  \"dateOfBirth\": \"\",\r\n  \"familyCardNo\": \"\",\r\n  \"gender\": \"MALE\",\r\n  \"icNumber\": \"{{mobileNumber}}\",\r\n  \"icType\": \"{{icType}}\",\r\n  \"kycType\": \"LEVEL 1\",\r\n  \"kycTypeId\": 42,\r\n  \"mobileNumber\": \"{{mobileNumber}}\",\r\n  \"modifiedBy\": \"\",\r\n  \"modifiedReason\": \"\",\r\n  \"mothersMaidenName\": \"\",\r\n  \"nationality\": 26,\r\n  \"note\": \"\",\r\n  \"objective\": \"\",\r\n  \"occupation\": \"\",\r\n  \"ownerId\": 0,\r\n  \"placeOfBirth\": \"\",\r\n  \"politicallyExposed\": false,\r\n  \"provider\": \"{{operator}}\",\r\n  \"province\": 42,\r\n  \"regMode\": \"WEB\",\r\n  \"residentailAddress\": \"\",\r\n  \"segment\": \"\",\r\n  \"sourceOfFund\": \"\",\r\n  \"status\": \"ACTIVE\"\r\n}"
+										},
+										"url": {
+											"raw": "{{hostname}}:8185/subscriber/register?lang=en",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"subscriber",
+												"register"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Fakes Name",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9b562b75-13ac-4581-84e3-0ce68913dca4",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"",
+													"pm.environment.set(\"surName\", jsonData.surname);",
+													"",
+													"",
+													"",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://uinames.com/api/?ext&region=indonesia",
+											"protocol": "https",
+											"host": [
+												"uinames",
+												"com"
+											],
+											"path": [
+												"api",
+												""
+											],
+											"query": [
+												{
+													"key": "ext",
+													"value": null
+												},
+												{
+													"key": "region",
+													"value": "indonesia"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "WHEN Admin create customer with normal flow",
+							"item": [
+								{
+									"name": "200: Upgrade Level 2",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "accept",
+												"value": "*/*"
+											},
+											{
+												"key": "userName",
+												"value": "abc"
+											},
+											{
+												"key": "password",
+												"value": "123"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mobileNumber\": \"{{mobileNumber}}\",\n    \"mothersMaidenName\": \"{{surname}}\",\n    \"upgradedUserType\": \"LEVEL 2\"\n}"
+										},
+										"url": {
+											"raw": "http://10.23.217.14:8184/service/pin/request/upgrade?lang=en",
+											"protocol": "http",
+											"host": [
+												"10",
+												"23",
+												"217",
+												"14"
+											],
+											"port": "8184",
+											"path": [
+												"service",
+												"pin",
+												"request",
+												"upgrade"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "THEN Customer can created",
+							"item": [
+								{
+									"name": "200: Search Subcriber",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "fbb3a14c-1983-48b6-a78c-62906f322a8a",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"var mobileNumber = pm.environment.get(\"mobileNumber\"); ",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(mobileNumber);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Request-Id",
+												"value": "{{request-id}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"mobileNumber\": \"{{mobileNumber}}\"\n}"
+										},
+										"url": {
+											"raw": "http://10.23.217.14:8185/subscribers/user/mobile?lang=en",
+											"protocol": "http",
+											"host": [
+												"10",
+												"23",
+												"217",
+												"14"
+											],
+											"port": "8185",
+											"path": [
+												"subscribers",
+												"user",
+												"mobile"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c96249bf-4d55-4789-beb6-48ccff1b1fb7",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "5469162e-661a-4cb1-a253-e7e4af947fcf",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "TC-002 - Create Customer Blacklist",
+					"item": [
+						{
+							"name": "GIVEN Admin can create Customer",
+							"item": [
+								{
+									"name": "Get Fakes Name",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9b562b75-13ac-4581-84e3-0ce68913dca4",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"",
+													"pm.environment.set(\"surName\", jsonData.surname);",
+													"pm.environment.set(\"name\", jsonData.name + ' ' + jsonData.surname);",
+													"pm.environment.set(\"gender\", jsonData.gender.toUpperCase());",
+													"pm.environment.set(\"country\", jsonData.region);",
+													"",
+													"",
+													"",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://uinames.com/api/?ext&region=indonesia",
+											"protocol": "https",
+											"host": [
+												"uinames",
+												"com"
+											],
+											"path": [
+												"api",
+												""
+											],
+											"query": [
+												{
+													"key": "ext",
+													"value": null
+												},
+												{
+													"key": "region",
+													"value": "indonesia"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "WHEN Admin can't create customer using blacklist",
+							"item": [
+								{
+									"name": "200 : Add Watchlist",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a6eed598-6caf-4cce-9780-57aeac0205c1",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Success\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "0037d44c-f757-4496-8392-ea4ecd9d20f9",
+												"exec": [
+													"var categories = ['WMD','TERORIST', 'BLACKLIST']\r",
+													"var chosen_category = categories.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"pm.environment.set(\"watchlistCategory\", chosen_category);\r",
+													"\r",
+													"var ic_number = Math.floor(Math.random() * 10000000000000000);\r",
+													"pm.environment.set(\"icNumber\", ic_number);\r",
+													"\r",
+													"var ic_types = ['KTP', 'Passport', 'SIM', 'KITAS']\r",
+													"var chosen_icType = ic_types.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"pm.environment.set(\"icType\", chosen_icType);\r",
+													"\r",
+													"var moment = require('moment');\r",
+													"pm.environment.set('dob', moment().add(Math.floor(Math.random() * -7300) - 10950, 'days').format('YYYY/MM/DD 00:00:00'));\r",
+													"\r",
+													"var operator = [\"XL\", \"AXIS\"];\r",
+													"var chosen_operator = operator.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"pm.environment.set(\"operator\", chosen_operator);\r",
+													"var prefixs = [\"\"];\r",
+													"\r",
+													"if (operator == \"XL\") {\r",
+													"    prefixs =  [\"817\", \"818\", \"819\", \"877\", \"878\"];\r",
+													"}\r",
+													"else {\r",
+													"    prefixs =  [\"838\", \"831\", \"832\", \"833\"];\r",
+													"}\r",
+													"var chosen_prefix = prefixs.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"var mobileNumber =  chosen_prefix + Math.floor(Math.random() * 1000000000);\r",
+													"\r",
+													"pm.environment.set(\"mobileNumber\", mobileNumber);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "lang",
+												"value": "en"
+											},
+											{
+												"key": "request-id",
+												"value": "{{request-id}}"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{dob}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
+										},
+										"url": {
+											"raw": "{{hostname}}:8185/watchlist/add?lang=en",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"watchlist",
+												"add"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										},
+										"description": "Add or update watchlist"
+									},
+									"response": []
+								},
+								{
+									"name": "200: Verify Customer",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "2d8f220e-31c1-4fe0-8650-aad3b01f2def",
+												"exec": [
+													"var dob = pm.environment.get(\"dob\");",
+													"",
+													"dob = dob.replace(/\\//g,'-');",
+													"pm.environment.set(\"dob\", dob);"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "0dc75bef-a0c2-47fb-b515-5e426d6dd1b5",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Error\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Request-Id",
+												"value": "{{request-id}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"actionType\": \"Registered\",\n  \"dateOfBirth\": \"{{dob}}\",\n  \"fullName\": \"{{name}}\",\n  \"icNumber\": \"{{icNumber}}\"\n}"
+										},
+										"url": {
+											"raw": "{{hostname}}:8185/subscriber/risk/identify?lang=en",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"subscriber",
+												"risk",
+												"identify"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "24c383f2-263b-4fbd-94c0-cd42cebf217a",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "e4d5bd7a-b211-4d4c-9be7-2f9028614c19",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "THEN Customer can created",
+							"item": [
+								{
+									"name": "200: Search Subcriber",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "6b2b977d-cb9e-47b9-a2b3-54a92d0042d9",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Subscriber not found.\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Request-Id",
+												"value": "{{request-id}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"mobileNumber\": \"{{mobileNumber}}\"\n}"
+										},
+										"url": {
+											"raw": "http://10.23.217.14:8185/subscribers/user/mobile?lang=en",
+											"protocol": "http",
+											"host": [
+												"10",
+												"23",
+												"217",
+												"14"
+											],
+											"port": "8185",
+											"path": [
+												"subscribers",
+												"user",
+												"mobile"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "dc101299-12f0-4580-87ac-0145695b1da5",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "78ff7e14-5a89-4922-a4a1-b7ce28dcb03a",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "TC-002 - Create Customer Warning",
+					"item": [
+						{
+							"name": "GIVEN Admin can create Customer",
+							"item": [
+								{
+									"name": "Get Fakes Name",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9b562b75-13ac-4581-84e3-0ce68913dca4",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"",
+													"pm.environment.set(\"surName\", jsonData.surname);",
+													"pm.environment.set(\"name\", jsonData.name + ' ' + jsonData.surname);",
+													"pm.environment.set(\"gender\", jsonData.gender.toUpperCase());",
+													"pm.environment.set(\"country\", jsonData.region);",
+													"",
+													"",
+													"",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://uinames.com/api/?ext&region=indonesia",
+											"protocol": "https",
+											"host": [
+												"uinames",
+												"com"
+											],
+											"path": [
+												"api",
+												""
+											],
+											"query": [
+												{
+													"key": "ext",
+													"value": null
+												},
+												{
+													"key": "region",
+													"value": "indonesia"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "WHEN Admin can't create customer using warning category",
+							"item": [
+								{
+									"name": "200 : Add Watchlist",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a6eed598-6caf-4cce-9780-57aeac0205c1",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Success\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "0037d44c-f757-4496-8392-ea4ecd9d20f9",
+												"exec": [
+													"var categories = ['Warning', 'PEP'];\r",
+													"var chosen_category = categories.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"pm.environment.set(\"watchlistCategory\", chosen_category);\r",
+													"\r",
+													"var ic_number = Math.floor(Math.random() * 10000000000000000);\r",
+													"pm.environment.set(\"icNumber\", ic_number);\r",
+													"\r",
+													"var ic_types = ['KTP', 'Passport', 'SIM', 'KITAS']\r",
+													"var chosen_icType = ic_types.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"pm.environment.set(\"icType\", chosen_icType);\r",
+													"\r",
+													"var moment = require('moment');\r",
+													"pm.environment.set('dob', moment().add(Math.floor(Math.random() * -7300) - 10950, 'days').format('YYYY/MM/DD 00:00:00'));\r",
+													"\r",
+													"var operator = [\"XL\", \"AXIS\"];\r",
+													"var chosen_operator = operator.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"pm.environment.set(\"operator\", chosen_operator);\r",
+													"var prefixs = [\"\"];\r",
+													"\r",
+													"if (operator == \"XL\") {\r",
+													"    prefixs =  [\"817\", \"818\", \"819\", \"877\", \"878\"];\r",
+													"}\r",
+													"else {\r",
+													"    prefixs =  [\"838\", \"831\", \"832\", \"833\"];\r",
+													"}\r",
+													"var chosen_prefix = prefixs.sort(function() {return 0.5 - Math.random()})[0];\r",
+													"\r",
+													"var mobileNumber =  chosen_prefix + Math.floor(Math.random() * 1000000000);\r",
+													"\r",
+													"pm.environment.set(\"mobileNumber\", mobileNumber);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "lang",
+												"value": "en"
+											},
+											{
+												"key": "request-id",
+												"value": "{{request-id}}"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{dob}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
+										},
+										"url": {
+											"raw": "{{hostname}}:8185/watchlist/add?lang=en",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"watchlist",
+												"add"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										},
+										"description": "Add or update watchlist"
+									},
+									"response": []
+								},
+								{
+									"name": "200: Verify Customer",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "2d8f220e-31c1-4fe0-8650-aad3b01f2def",
+												"exec": [
+													"var dob = pm.environment.get(\"dob\");",
+													"",
+													"dob = dob.replace(/\\//g,'-');",
+													"pm.environment.set(\"dob\", dob);"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "0dc75bef-a0c2-47fb-b515-5e426d6dd1b5",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Error\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Request-Id",
+												"value": "{{request-id}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"actionType\": \"Registered\",\n  \"dateOfBirth\": \"{{dob}}\",\n  \"fullName\": \"{{name}}\",\n  \"icNumber\": \"{{icNumber}}\"\n}"
+										},
+										"url": {
+											"raw": "{{hostname}}:8185/subscriber/risk/identify?lang=en",
+											"host": [
+												"{{hostname}}"
+											],
+											"port": "8185",
+											"path": [
+												"subscriber",
+												"risk",
+												"identify"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "24c383f2-263b-4fbd-94c0-cd42cebf217a",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "e4d5bd7a-b211-4d4c-9be7-2f9028614c19",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "THEN Customer can created",
+							"item": [
+								{
+									"name": "200: Search Subcriber",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "6b2b977d-cb9e-47b9-a2b3-54a92d0042d9",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 200ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Subscriber not found.\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Request-Id",
+												"value": "{{request-id}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"mobileNumber\": \"{{mobileNumber}}\"\n}"
+										},
+										"url": {
+											"raw": "http://10.23.217.14:8185/subscribers/user/mobile?lang=en",
+											"protocol": "http",
+											"host": [
+												"10",
+												"23",
+												"217",
+												"14"
+											],
+											"port": "8185",
+											"path": [
+												"subscribers",
+												"user",
+												"mobile"
+											],
+											"query": [
+												{
+													"key": "lang",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "dc101299-12f0-4580-87ac-0145695b1da5",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "78ff7e14-5a89-4922-a4a1-b7ce28dcb03a",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
 						}
 					],
 					"_postman_isSubFolder": true
 				}
 			]
+		},
+		{
+			"name": "CASH OUT",
+			"item": [
+				{
+					"name": "TC-001",
+					"item": [
+						{
+							"name": "200:Post Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ea8ba6fc-3868-4cee-a89e-0ce60e8efb47",
+										"exec": [
+											"var jsonData = pm.response.json();",
+											"",
+											"pm.environment.set(\"token\", jsonData.generatedToken);",
+											"pm.environment.set(\"referanceId\", jsonData.referanceId);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "userName",
+										"value": "{{userName}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									}
+								],
+								"url": {
+									"raw": "{{hostname}}:8183/service/transaction/token/83812560388/TX_BCO",
+									"host": [
+										"{{hostname}}"
+									],
+									"port": "8183",
+									"path": [
+										"service",
+										"transaction",
+										"token",
+										"83812560388",
+										"TX_BCO"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "200 : Do Transaction Cash Out",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "userName",
+										"value": "{{userName}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"initiatorAlias\": \"BRANCHWALLET\",\n    \"channel\": \"WEB\",\n    \"txtAmount\": 100,\n    \"txtTxnCode\": \"TX_BCO\",\n    \"txtInitiatorPIN\": \"null\",\n    \"referenceNumber\": {{referanceId}},\n    \"params\": [\n        {\n            \"referenceName\": \"token\",\n            \"inputValue\": {{token}}\n        },\n        {\n            \"referenceName\": \"accountNumber\",\n            \"inputValue\": \"customer cash out\"\n        },\n        {\n            \"referenceName\": \"adminUser\",\n            \"inputValue\": \"bima\"\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://10.23.217.14:8183/service/doTransaction?lang=en",
+									"protocol": "http",
+									"host": [
+										"10",
+										"23",
+										"217",
+										"14"
+									],
+									"port": "8183",
+									"path": [
+										"service",
+										"doTransaction"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "en"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "CASH IN",
+			"item": [
+				{
+					"name": "TC-001",
+					"item": [
+						{
+							"name": "200 : Do Transaction Cash In",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ef6737ec-d4d0-4180-9203-3c8f74396822",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "userName",
+										"value": "{{userName}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"initiatorAlias\": \"BRANCHWALLET\",\r\n  \"channel\": \"WEB\",\r\n  \"txtAmount\": 5000,\r\n  \"txtTxnCode\": \"TX_BCI\",\r\n  \"txtInitiatorPIN\": \"null\", \r\n  \"referenceNumber\":{{referanceId}},\r\n  \"params\": [\r\n    {\r\n      \"referenceName\": \"recipientAlias\",\r\n      \"inputValue\": \"83812560388\"\r\n    },\r\n    {\r\n      \"referenceName\": \"accountNumber\",\r\n      \"inputValue\": \"customer cash in\"\r\n    },\r\n    {\r\n      \"referenceName\": \"adminUser\",\r\n      \"inputValue\": \"bima\"\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{hostname}}:8183/service/doTransaction?lang=en",
+									"host": [
+										"{{hostname}}"
+									],
+									"port": "8183",
+									"path": [
+										"service",
+										"doTransaction"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "en"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "PIN",
+			"item": [
+				{
+					"name": "CHANGE PIN",
+					"item": [
+						{
+							"name": "200: Post Change PIN",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "userName",
+										"value": "{{userName}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mobileNumber\": \"83812560388\",\n    \"newPin\": \"123456\",\n    \"oldPin\": \"325331\"\n}"
+								},
+								"url": {
+									"raw": "{{hostname}}:8184/service/pin/change?lang=en",
+									"host": [
+										"{{hostname}}"
+									],
+									"port": "8184",
+									"path": [
+										"service",
+										"pin",
+										"change"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "en"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "FORGOT PIN",
+					"item": [
+						{
+							"name": "200:Forgot PIN",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "userName",
+										"value": "{{userName}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mobileNo\": \"83812560388\",\n    \"motherMaidnName\": \"YUNIAR\"\n}"
+								},
+								"url": {
+									"raw": "{{hostname}}:8184/service/pin/forgot?lang=en",
+									"host": [
+										"{{hostname}}"
+									],
+									"port": "8184",
+									"path": [
+										"service",
+										"pin",
+										"forgot"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "en"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "RELOAD",
+			"item": [
+				{
+					"name": "Reload Own Number",
+					"item": [
+						{
+							"name": "200 : Do Transaction Reload Own Number",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "95a2874c-ba66-47b5-b51e-a1f47a071ed2",
+										"exec": [
+											"var moment = require(\"moment\");",
+											"var referanceId = moment().unix();",
+											"pm.environment.set(\"referanceId\", referanceId);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "userName",
+										"value": "{{userName}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"initiatorAlias\": \"83812560388\",\r\n  \"channel\": \"ussd\",\r\n  \"txtAmount\": 5000,\r\n  \"txtTxnCode\": \"RL-5K\",\r\n  \"txtInitiatorPIN\": \"123456\", \r\n  \"referenceNumber\":{{referanceId}},\r\n  \"params\": [\r\n    {\r\n      \"referenceName\": \"receiverMobileNo\",\r\n      \"inputValue\": \"83812560388\"\r\n    },\r\n    {\r\n      \"referenceName\": \"customerRefNo\",\r\n      \"inputValue\": \"83812560388\"\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{hostname}}:8183/service/doTransaction?lang=en",
+									"host": [
+										"{{hostname}}"
+									],
+									"port": "8183",
+									"path": [
+										"service",
+										"doTransaction"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "en"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Reload  XL or AXIS Number",
+					"item": [
+						{
+							"name": "200 : Do Transaction Reload XL or Axis Number",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "95a2874c-ba66-47b5-b51e-a1f47a071ed2",
+										"exec": [
+											"var moment = require(\"moment\");",
+											"var referanceId = moment().unix();",
+											"pm.environment.set(\"referanceId\", referanceId);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "userName",
+										"value": "{{userName}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"initiatorAlias\": \"83812560388\",\r\n  \"channel\": \"ussd\",\r\n  \"txtAmount\": 5000,\r\n  \"txtTxnCode\": \"RL-5K\",\r\n  \"txtInitiatorPIN\": \"123456\", \r\n  \"referenceNumber\":{{referanceId}},\r\n  \"params\": [\r\n    {\r\n      \"referenceName\": \"receiverMobileNo\",\r\n      \"inputValue\": \"83871353089\"\r\n    },\r\n    {\r\n      \"referenceName\": \"customerRefNo\",\r\n      \"inputValue\": \"83812560388\"\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{hostname}}:8183/service/doTransaction?lang=en",
+									"host": [
+										"{{hostname}}"
+									],
+									"port": "8183",
+									"path": [
+										"service",
+										"doTransaction"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "en"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Reload  Other Operator",
+					"item": [
+						{
+							"name": "200 : Do Transaction Reload Other Operator",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "95a2874c-ba66-47b5-b51e-a1f47a071ed2",
+										"exec": [
+											"var moment = require(\"moment\");",
+											"var referanceId = moment().unix();",
+											"pm.environment.set(\"referanceId\", referanceId);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "userName",
+										"value": "{{userName}}"
+									},
+									{
+										"key": "password",
+										"value": "{{password}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"initiatorAlias\": \"83812560388\",\r\n  \"channel\": \"ussd\",\r\n  \"txtAmount\": 5000,\r\n  \"txtTxnCode\": \"RL-5K\",\r\n  \"txtInitiatorPIN\": \"123456\", \r\n  \"referenceNumber\":{{referanceId}},\r\n  \"params\": [\r\n    {\r\n      \"referenceName\": \"receiverMobileNo\",\r\n      \"inputValue\": \"81573637340\"\r\n    },\r\n    {\r\n      \"referenceName\": \"customerRefNo\",\r\n      \"inputValue\": \"83812560388\"\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{hostname}}:8183/service/doTransaction?lang=en",
+									"host": [
+										"{{hostname}}"
+									],
+									"port": "8183",
+									"path": [
+										"service",
+										"doTransaction"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "en"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "200 : Do Transaction Reload Other Operator Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "95a2874c-ba66-47b5-b51e-a1f47a071ed2",
+						"exec": [
+							"var moment = require(\"moment\");",
+							"var referanceId = moment().unix();",
+							"pm.environment.set(\"referanceId\", referanceId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "userName",
+						"value": "{{userName}}"
+					},
+					{
+						"key": "password",
+						"value": "{{password}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"initiatorAlias\": \"83812560388\",\r\n  \"channel\": \"web\",\r\n  \"txtAmount\": 1000,\r\n  \"txtTxnCode\": \"TX_ADJ\",\r\n  \"txtInitiatorPIN\": \"\", \r\n  \"referenceNumber\":{{referanceId}},\r\n  \"params\": [\r\n    {\r\n      \"referenceName\": \"recipientAlias\",\r\n      \"inputValue\": \"BRANCHWALLET\"\r\n    },\r\n    {\r\n      \"referenceName\": \"accountNumber\",\r\n      \"inputValue\": \"83812560388\"\r\n    },\r\n    {\r\n      \"referenceName\": \"adminUser\",\r\n      \"inputValue\": \"bima\"\r\n    }\r\n  ]\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "{{hostname}}:8183/service/doTransaction?lang=en",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8183",
+					"path": [
+						"service",
+						"doTransaction"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
