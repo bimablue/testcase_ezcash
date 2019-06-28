@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "86f6f2ee-a0bc-4979-9df5-139c75cc13df",
+		"_postman_id": "bc55c891-5937-4002-8888-9cd3e89543c5",
 		"name": "TESTCASE_XLTUNAI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -612,7 +612,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{bod}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
+											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{dob}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
 										},
 										"url": {
 											"raw": "{{hostname}}:8185/watchlist/add?lang=en",
@@ -846,7 +846,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{bod}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
+											"raw": "[\n  {\n    \"category\": \"{{watchlistCategory}}\",\n    \"country\": \"{{country}}\",\n    \"dateOfBirth\":\"{{dob}}\",\n    \"fullName\": \"{{name}}\",\n    \"icNumber\": \"{{icNumber}}\",\n    \"icType\": \"{{icType}}\"\n  }\n]"
 										},
 										"url": {
 											"raw": "{{hostname}}:8185/watchlist/add?lang=en",
